@@ -26,6 +26,10 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
+# Use a prebuilt dt.img
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/dt.img:dt.img
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
